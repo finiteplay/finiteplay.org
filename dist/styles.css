@@ -194,6 +194,7 @@ h3 { font-size: 1.45rem; }
 .promise-grid article:hover { background: rgba(38, 210, 207, 0.045); }
 .promise-grid span { display: block; margin-bottom: 2.8rem; color: var(--cyan); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.1em; }
 .promise-grid p { margin-bottom: 0; color: var(--muted); font-size: 0.94rem; }
+.promise-note { max-width: 880px; margin: 2rem 0 0; color: #bdd0df; }
 
 .healthy { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: clamp(3rem, 8vw, 8rem); }
 .healthy h2 { max-width: 480px; }
