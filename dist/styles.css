@@ -64,29 +64,14 @@ a { color: inherit; }
 
 .brand,
 .footer-brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.55rem;
-  color: var(--white);
-  font-size: 1.52rem;
-  font-weight: 700;
-  letter-spacing: -0.035em;
-  line-height: 1;
-  text-decoration: none;
-}
-
-.logo-mark {
-  width: 35px;
-  height: 43px;
   display: block;
-  flex: 0 0 auto;
-  overflow: hidden;
 }
 
-.logo-mark img {
-  width: auto;
-  max-width: none;
-  height: 43px;
+.brand { width: 188px; }
+.brand img,
+.footer-brand {
+  width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -272,7 +257,7 @@ footer p { margin: 0; }
 
 @media (max-width: 720px) {
   .site-header { padding: 1rem 0; align-items: flex-start; }
-  .brand { margin-top: 0.35rem; font-size: 1.25rem; }
+  .brand { width: 152px; margin-top: 0.1rem; }
   nav { max-width: 230px; justify-content: flex-end; flex-wrap: wrap; gap: 0.5rem 1rem; }
   nav a { font-size: 0.82rem; }
   .nav-cta { padding: 0.3rem 0.65rem; }
