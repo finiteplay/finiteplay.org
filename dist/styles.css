@@ -204,6 +204,8 @@ h3 { font-size: 1.45rem; }
 .project-card.muted { border-color: var(--line); background: rgba(255,255,255,0.025); }
 .project-card p { margin-bottom: 0; }
 .project-card .status { margin: 0 0 0.6rem; color: var(--cyan); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; }
+.project-link { display: inline-flex; margin-top: 1.25rem; color: var(--cyan); font-weight: 760; text-decoration-thickness: 1px; text-underline-offset: 0.24em; }
+.project-link:hover, .project-link:focus-visible { color: var(--white); }
 .project-icon { width: 150px; height: 150px; display: block; border-radius: 30%; box-shadow: 0 20px 38px rgba(0,0,0,0.3); }
 
 .two-column { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.2rem; }
