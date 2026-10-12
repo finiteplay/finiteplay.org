@@ -2,3 +2,5 @@
 .npm-cache/
 .wrangler-config/
 .wrangler/
+dist/MyFirstVisit/
+.my-first-visit/

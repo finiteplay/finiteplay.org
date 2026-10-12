@@ -4,15 +4,34 @@ on:
   push:
     branches:
       - main
+  # MyFirstVisit changes do not touch this repository: run this workflow (Actions tab, or
+  # `gh workflow run deploy.yml -R finiteplay/finiteplay.org`) to publish the latest guide.
+  workflow_dispatch:
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    env:
+      # Public bucket (Cloudflare R2) holding the guide's photos and audio; keys are content-hashed and immutable.
+      MFV_MEDIA_BASE: https://media.finiteplay.org/myfirstvisit/
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Checkout MyFirstVisit
+        uses: actions/checkout@v4
+        with:
+          repository: finiteplay/my-first-visit
+          path: .my-first-visit
+
+      - name: Build MyFirstVisit into dist/MyFirstVisit
+        run: |
+          python3 .my-first-visit/tools/site/build_site.py \
+            --out dist/MyFirstVisit \
+            --media-base "$MFV_MEDIA_BASE"
+          # Add --index above once the guide has passed editorial review; until then pages are noindex.
 
       - name: Deploy to Cloudflare Workers
         uses: cloudflare/wrangler-action@v3
